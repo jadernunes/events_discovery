@@ -24,4 +24,18 @@ final class ListEventsViewController<ViewModel: IListEventsViewModel>: UIHosting
     required init?(coder _: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        loadData()
+    }
+    
+    // MARK: - Methods
+    
+    private func loadData() {
+        Task {
+            await viewModel.loadData()
+        }
+    }
 }
