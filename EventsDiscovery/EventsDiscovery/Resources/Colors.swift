@@ -28,4 +28,9 @@ struct Colors {
         static let uikit: UIColor = .init(swiftUI)
         static let swiftUI: Color = .init("customWhite")
     }
+    
+    enum MediumBlue {
+        static let uikit: UIColor = .init(swiftUI)
+        static let swiftUI: Color = .init("mediumBlue")
+    }
 }
