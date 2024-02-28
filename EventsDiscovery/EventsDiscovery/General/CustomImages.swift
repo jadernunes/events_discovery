@@ -1,5 +1,5 @@
 //
-//  UIImage+Extension.swift
+//  CustomImages.swift
 //  EventsDiscovery
 //
 //  Created by Jader Nunes on 2024-02-28.
