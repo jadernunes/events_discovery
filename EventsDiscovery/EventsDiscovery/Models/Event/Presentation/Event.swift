@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Event {
+struct Event: Equatable {
     let id: String
     let name: String
     let classification: String
