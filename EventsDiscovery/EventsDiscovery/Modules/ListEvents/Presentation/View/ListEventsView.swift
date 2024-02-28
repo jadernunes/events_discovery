@@ -22,14 +22,14 @@ struct ListEventsView<ViewModel: IListEventsViewModel>: View {
     var body: some View {
         switch viewModel.state {
         case .empty:
-            MessageRetryView(imageName: "noData", message: "No data")
+            MessageRetryView(imageName: "noData", message: Localize.string(key: "noData"))
                 .onRetry {
                     await viewModel.loadData(currentEvent: nil)
                 }
         case .loading:
             loadingView
         case .error:
-            MessageRetryView(imageName: "error", message: "Something went wrong")
+            MessageRetryView(imageName: "error", message: Localize.string(key: "genericErrorMessage"))
                 .onRetry {
                     await viewModel.loadData(currentEvent: nil)
                 }
