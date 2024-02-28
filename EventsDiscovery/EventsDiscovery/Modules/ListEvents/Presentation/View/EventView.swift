@@ -62,7 +62,7 @@ private extension EventView {
             CacheAsyncImage(url: url) { phase in
                 switch phase {
                 case .empty:
-                    ProgressView()
+                    LoaderView()
                 case .success(let image):
                     imageWithStyle(image: image)
                 case .failure:

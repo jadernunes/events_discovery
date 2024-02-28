@@ -10,3 +10,6 @@
 
 "listEvents.title" = "Events";
 "classification.title" = "Classification";
+"retry" = "Retry";
+"noData" = "No data";
+"genericErrorMessage" = "Something went wrong";
