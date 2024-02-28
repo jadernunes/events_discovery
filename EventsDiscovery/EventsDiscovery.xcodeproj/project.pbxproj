@@ -25,7 +25,7 @@
 		272D76C72B8F4FC700551BC2 /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76C62B8F4FC700551BC2 /* Event.swift */; };
 		272D76CF2B8F6CD600551BC2 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76CE2B8F6CD600551BC2 /* CacheAsyncImage.swift */; };
 		272D76D42B8F8B9200551BC2 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 272D76D32B8F8B9200551BC2 /* Alamofire */; };
-		272D76D72B8F8C5400551BC2 /* CustomImages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76D62B8F8C5400551BC2 /* CustomImages.swift */; };
+		272D76D72B8F8C5400551BC2 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76D62B8F8C5400551BC2 /* Images.swift */; };
 		272D76D92B8F8C8A00551BC2 /* Requestable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76D82B8F8C8A00551BC2 /* Requestable.swift */; };
 		272D76DB2B8F8CB400551BC2 /* NetworkSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76DA2B8F8CB400551BC2 /* NetworkSession.swift */; };
 		272D76DD2B8F92C100551BC2 /* AlamofireAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76DC2B8F92C100551BC2 /* AlamofireAttributes.swift */; };
@@ -41,6 +41,8 @@
 		272D76FE2B8FBC2B00551BC2 /* DateFormatter+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76FD2B8FBC2B00551BC2 /* DateFormatter+Extension.swift */; };
 		272D77002B8FBC4D00551BC2 /* JSONDecoder+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76FF2B8FBC4D00551BC2 /* JSONDecoder+Extension.swift */; };
 		272D77032B8FBD6100551BC2 /* NetworkErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77022B8FBD6100551BC2 /* NetworkErrorType.swift */; };
+		272D77052B8FCA2300551BC2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77042B8FCA2300551BC2 /* Colors.swift */; };
+		272D77072B8FCE3700551BC2 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77062B8FCE3700551BC2 /* Fonts.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,7 +76,7 @@
 		272D76C12B8F4F3D00551BC2 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 		272D76C62B8F4FC700551BC2 /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		272D76CE2B8F6CD600551BC2 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
-		272D76D62B8F8C5400551BC2 /* CustomImages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomImages.swift; sourceTree = "<group>"; };
+		272D76D62B8F8C5400551BC2 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		272D76D82B8F8C8A00551BC2 /* Requestable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Requestable.swift; sourceTree = "<group>"; };
 		272D76DA2B8F8CB400551BC2 /* NetworkSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkSession.swift; sourceTree = "<group>"; };
 		272D76DC2B8F92C100551BC2 /* AlamofireAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAttributes.swift; sourceTree = "<group>"; };
@@ -90,6 +92,8 @@
 		272D76FD2B8FBC2B00551BC2 /* DateFormatter+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Extension.swift"; sourceTree = "<group>"; };
 		272D76FF2B8FBC4D00551BC2 /* JSONDecoder+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JSONDecoder+Extension.swift"; sourceTree = "<group>"; };
 		272D77022B8FBD6100551BC2 /* NetworkErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorType.swift; sourceTree = "<group>"; };
+		272D77042B8FCA2300551BC2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		272D77062B8FCE3700551BC2 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,7 +176,6 @@
 		272D76A02B8EA8BA00551BC2 /* General */ = {
 			isa = PBXGroup;
 			children = (
-				272D76D62B8F8C5400551BC2 /* CustomImages.swift */,
 				272D76A12B8EA8C300551BC2 /* Config.swift */,
 				272D76AE2B8EAC0B00551BC2 /* InitialFlow.swift */,
 			);
@@ -182,6 +185,9 @@
 		272D76A32B8EA94100551BC2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				272D77062B8FCE3700551BC2 /* Fonts.swift */,
+				272D76D62B8F8C5400551BC2 /* Images.swift */,
+				272D77042B8FCA2300551BC2 /* Colors.swift */,
 				272D76752B8EA73700551BC2 /* Assets.xcassets */,
 				272D76A42B8EA96700551BC2 /* README.md */,
 				272D76B22B8EB12800551BC2 /* Launch Screen.storyboard */,
@@ -509,17 +515,19 @@
 				272D76BD2B8EBDE200551BC2 /* ListEventsView.swift in Sources */,
 				272D76FE2B8FBC2B00551BC2 /* DateFormatter+Extension.swift in Sources */,
 				272D76A92B8EAB5000551BC2 /* AppDelegate.swift in Sources */,
+				272D77072B8FCE3700551BC2 /* Fonts.swift in Sources */,
 				272D76CF2B8F6CD600551BC2 /* CacheAsyncImage.swift in Sources */,
 				272D76E52B8FBA2C00551BC2 /* ImagesDTO.swift in Sources */,
 				272D76A22B8EA8C300551BC2 /* Config.swift in Sources */,
 				272D76EC2B8FBA7E00551BC2 /* EventDTO.swift in Sources */,
+				272D77052B8FCA2300551BC2 /* Colors.swift in Sources */,
 				272D76E92B8FBA5100551BC2 /* EmbeddedDTO.swift in Sources */,
 				272D76FA2B8FBBDF00551BC2 /* Encodable+Extension.swift in Sources */,
 				272D76AB2B8EAB7E00551BC2 /* SceneDelegate.swift in Sources */,
 				272D76E72B8FBA4100551BC2 /* EventResultDTO.swift in Sources */,
 				272D76B62B8EB51B00551BC2 /* ListEventsCoordinator.swift in Sources */,
 				272D76DB2B8F8CB400551BC2 /* NetworkSession.swift in Sources */,
-				272D76D72B8F8C5400551BC2 /* CustomImages.swift in Sources */,
+				272D76D72B8F8C5400551BC2 /* Images.swift in Sources */,
 				272D76C22B8F4F3D00551BC2 /* EventView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

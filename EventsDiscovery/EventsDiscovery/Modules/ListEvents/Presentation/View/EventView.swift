@@ -35,7 +35,7 @@ struct EventView: View {
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .cornerRadius(8)
-            .background(Color.white.clipShape(RoundedRectangle(cornerRadius:8)))
+            .background(Colors.CustomWhite.swiftUI.clipShape(RoundedRectangle(cornerRadius:8)))
             .padding(.horizontal, 20)
             .padding(.vertical, 10)
             .overlay(eventBoarder)
@@ -66,7 +66,7 @@ private extension EventView {
                 case .success(let image):
                     imageWithStyle(image: image)
                 case .failure:
-                    imageWithStyle(image: CustomImages.NoImage.image)
+                    imageWithStyle(image: Images.NoImage.image)
                 @unknown default:
                     EmptyView()
                 }
@@ -74,21 +74,26 @@ private extension EventView {
             .frame(width: imageSize, height: imageSize)
             .cornerRadius(8)
         } else {
-            imageWithStyle(image: CustomImages.NoImage.image)
+            imageWithStyle(image: Images.NoImage.image)
         }
     }
     
     var titleView: some View {
         Text(data.name)
             .lineLimit(2)
-            .font(.system(size: 16, weight: .semibold))
+            .font(Fonts.semibold16)
+            .foregroundStyle(Colors.StrongGray.swiftUI)
             .padding(.bottom, 8)
     }
     
     var classificationView: some View {
         HStack {
-            Text("Classification: ").font(.system(size: 12, weight: .regular))
-            Text(data.classification).font(.system(size: 12, weight: .thin))
+            Text("Classification: ")
+                .font(Fonts.regular12)
+                .foregroundStyle(Colors.MediumGray.swiftUI)
+            Text(data.classification).font(Fonts.thin12)
+                .foregroundStyle(Colors.MediumGray.swiftUI)
+                .lineLimit(2)
         }
     }
     
