@@ -35,7 +35,7 @@ final class ListEventsViewController<ViewModel: IListEventsViewModel>: UIHosting
     
     private func loadData() {
         Task {
-            await viewModel.loadData()
+            await viewModel.loadData(currentEvent: nil)
         }
     }
 }

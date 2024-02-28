@@ -11,8 +11,12 @@ final class Config {
 
     // MARK: - Properties
 
-    static var baseURL: String {
+    static var apiKey: String {
         configKey(key: "apiKey")
+    }
+    
+    static var baseURL: String {
+        configKey(key: "baseURL")
     }
 
     // MARK: - Methods

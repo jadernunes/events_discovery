@@ -27,12 +27,15 @@ struct ListEventsView<ViewModel: IListEventsViewModel>: View {
                               imageSize: geo.size.width * 0.25)
                     .listRowSeparator(.hidden)
                     .listRowInsets(EdgeInsets())
+                    .task {
+                        await viewModel.loadData(currentEvent: event)
+                    }
                 }
             }
             .listStyle(.plain)
             .frame(maxWidth: .infinity)
             .refreshable {
-                await viewModel.loadData()
+                await viewModel.loadData(currentEvent: nil)
             }
         }
         .navigationTitle("Event list")

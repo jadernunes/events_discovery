@@ -33,6 +33,7 @@ struct EventView: View {
                 .padding(.vertical, 8)
                 .padding(.trailing, 8)
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .cornerRadius(8)
             .background(Color.white.clipShape(RoundedRectangle(cornerRadius:8)))
             .padding(.horizontal, 20)
