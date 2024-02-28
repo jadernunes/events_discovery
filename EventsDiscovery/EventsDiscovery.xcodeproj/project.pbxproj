@@ -43,6 +43,8 @@
 		272D77032B8FBD6100551BC2 /* NetworkErrorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77022B8FBD6100551BC2 /* NetworkErrorType.swift */; };
 		272D77052B8FCA2300551BC2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77042B8FCA2300551BC2 /* Colors.swift */; };
 		272D77072B8FCE3700551BC2 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77062B8FCE3700551BC2 /* Fonts.swift */; };
+		272D770A2B8FD7D100551BC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 272D770C2B8FD7D100551BC2 /* Localizable.strings */; };
+		272D770F2B8FD8A900551BC2 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D770E2B8FD8A900551BC2 /* Localize.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +96,8 @@
 		272D77022B8FBD6100551BC2 /* NetworkErrorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkErrorType.swift; sourceTree = "<group>"; };
 		272D77042B8FCA2300551BC2 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		272D77062B8FCE3700551BC2 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
+		272D770B2B8FD7D100551BC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		272D770E2B8FD8A900551BC2 /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,6 +189,7 @@
 		272D76A32B8EA94100551BC2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				272D770D2B8FD89200551BC2 /* Localize */,
 				272D77062B8FCE3700551BC2 /* Fonts.swift */,
 				272D76D62B8F8C5400551BC2 /* Images.swift */,
 				272D77042B8FCA2300551BC2 /* Colors.swift */,
@@ -391,6 +396,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		272D770D2B8FD89200551BC2 /* Localize */ = {
+			isa = PBXGroup;
+			children = (
+				272D770C2B8FD7D100551BC2 /* Localizable.strings */,
+				272D770E2B8FD8A900551BC2 /* Localize.swift */,
+			);
+			path = Localize;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -478,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272D770A2B8FD7D100551BC2 /* Localizable.strings in Resources */,
 				272D769F2B8EA85C00551BC2 /* Config.plist in Resources */,
 				272D76A52B8EA96700551BC2 /* README.md in Resources */,
 				272D76B32B8EB12800551BC2 /* Launch Screen.storyboard in Resources */,
@@ -519,6 +534,7 @@
 				272D76CF2B8F6CD600551BC2 /* CacheAsyncImage.swift in Sources */,
 				272D76E52B8FBA2C00551BC2 /* ImagesDTO.swift in Sources */,
 				272D76A22B8EA8C300551BC2 /* Config.swift in Sources */,
+				272D770F2B8FD8A900551BC2 /* Localize.swift in Sources */,
 				272D76EC2B8FBA7E00551BC2 /* EventDTO.swift in Sources */,
 				272D77052B8FCA2300551BC2 /* Colors.swift in Sources */,
 				272D76E92B8FBA5100551BC2 /* EmbeddedDTO.swift in Sources */,
@@ -549,6 +565,17 @@
 			targetProxy = 272D76802B8EA73700551BC2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		272D770C2B8FD7D100551BC2 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				272D770B2B8FD7D100551BC2 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		272D76912B8EA73700551BC2 /* Debug */ = {

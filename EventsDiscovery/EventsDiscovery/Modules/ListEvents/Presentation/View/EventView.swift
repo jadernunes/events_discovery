@@ -88,7 +88,7 @@ private extension EventView {
     
     var classificationView: some View {
         HStack {
-            Text("Classification: ")
+            Text(Localize.string(key: "classification.title") + ": ")
                 .font(Fonts.regular12)
                 .foregroundStyle(Colors.MediumGray.swiftUI)
             Text(data.classification).font(Fonts.thin12)

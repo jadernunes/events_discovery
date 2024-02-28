@@ -38,6 +38,6 @@ struct ListEventsView<ViewModel: IListEventsViewModel>: View {
                 await viewModel.loadData(currentEvent: nil)
             }
         }
-        .navigationTitle("Event list")
+        .navigationTitle(Localize.string(key: "listEvents.title"))
     }
 }
