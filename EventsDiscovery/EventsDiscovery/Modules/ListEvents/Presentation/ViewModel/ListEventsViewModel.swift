@@ -7,11 +7,17 @@
 
 import Foundation
 
-protocol IListEventsViewModel: ObservableObject {}
+protocol IListEventsViewModel: ObservableObject {
+    var events: [Event] { get }
+    
+    func loadData() async
+}
 
 final class ListEventsViewModel: IListEventsViewModel {
     
     // MARK: - Properties
+    
+    @Published private(set) var events = [Event]()
     
     private let coordinator: IListEventsCoordinator?
     
@@ -19,5 +25,10 @@ final class ListEventsViewModel: IListEventsViewModel {
     
     init(coordinator: IListEventsCoordinator? = nil) {
         self.coordinator = coordinator
+    }
+    
+    @MainActor
+    func loadData() async {
+        // TODO: - Request data from server
     }
 }
