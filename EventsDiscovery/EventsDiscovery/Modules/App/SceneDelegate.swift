@@ -9,7 +9,7 @@ import UIKit
 
 final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
-    // MARK: - Attributes
+    // MARK: - Properties
 
     var window: UIWindow?
     private var coordinator: AppCoordinator?

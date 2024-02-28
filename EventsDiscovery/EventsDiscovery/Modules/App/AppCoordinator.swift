@@ -9,7 +9,7 @@ import UIKit
 
 final class AppCoordinator {
 
-    // MARK: - Attributes
+    // MARK: - Properties
 
     private let window: UIWindow?
     private let initialFlow: InitialFlow
@@ -21,7 +21,7 @@ final class AppCoordinator {
         self.initialFlow = initialFlow
     }
 
-    // MARK: - Attributes
+    // MARK: - Methods
 
     func start() {
         switch initialFlow {
