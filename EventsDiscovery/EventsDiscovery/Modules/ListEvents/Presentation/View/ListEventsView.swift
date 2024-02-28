@@ -20,15 +20,40 @@ struct ListEventsView<ViewModel: IListEventsViewModel>: View {
     }
     
     var body: some View {
+        switch viewModel.state {
+        case .empty:
+            MessageRetryView(imageName: "noData", message: "No data")
+                .onRetry {
+                    await viewModel.loadData(currentEvent: nil)
+                }
+        case .loading:
+            loadingView
+        case .error:
+            MessageRetryView(imageName: "error", message: "Something went wrong")
+                .onRetry {
+                    await viewModel.loadData(currentEvent: nil)
+                }
+        case let .ready(events):
+            loadContent(events)
+        default:
+            EmptyView()
+        }
+    }
+    
+    private func loadContent(_ events: [Event]) -> some View {
         GeometryReader { geo in
             List {
-                ForEach(viewModel.events, id: \.id) { event in
+                ForEach(events, id: \.id) { event in
                     EventView(data: event,
                               imageSize: geo.size.width * 0.25)
                     .listRowSeparator(.hidden)
                     .listRowInsets(EdgeInsets())
                     .task {
                         await viewModel.loadData(currentEvent: event)
+                    }
+                    
+                    if viewModel.shouldShowLoadMore(currentEvent: event) {
+                        loadingView
                     }
                 }
             }
@@ -39,5 +64,12 @@ struct ListEventsView<ViewModel: IListEventsViewModel>: View {
             }
         }
         .navigationTitle(Localize.string(key: "listEvents.title"))
+    }
+    
+    private var loadingView: some View {
+        VStack(alignment: .center) {
+            LoaderView()
+        }
+        .frame(maxWidth: .infinity)
     }
 }
