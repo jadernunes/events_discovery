@@ -15,7 +15,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         true
     }
 
-    // MARK: - UISceneSession Lifecycle
+    // MARK: - UISceneSession Life cycle
 
     func application(_ application: UIApplication,
                      configurationForConnecting connectingSceneSession: UISceneSession,

@@ -9,13 +9,13 @@ import UIKit
 
 final class Config {
 
-    // MARK: - Attributes
+    // MARK: - Properties
 
     static var baseURL: String {
         configKey(key: "apiKey")
     }
 
-    // MARK: - Custom methods
+    // MARK: - Methods
 
     private static func configKey(key: String) -> String {
         guard

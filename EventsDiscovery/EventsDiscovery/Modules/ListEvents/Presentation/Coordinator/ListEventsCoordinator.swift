@@ -7,13 +7,11 @@
 
 import UIKit
 
-protocol IListEventsCoordinator {
-    
-}
+protocol IListEventsCoordinator {}
 
 final class ListEventsCoordinator: IListEventsCoordinator {
 
-    // MARK: - Attributes
+    // MARK: - Properties
 
     private weak var presenter: UINavigationController?
 
@@ -23,7 +21,7 @@ final class ListEventsCoordinator: IListEventsCoordinator {
         self.presenter = presenter
     }
 
-    // MARK: - Custom methods
+    // MARK: - Methods
 
     func start() {
         let viewModel = ListEventsViewModel(coordinator: self)
