@@ -45,6 +45,9 @@
 		272D77072B8FCE3700551BC2 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77062B8FCE3700551BC2 /* Fonts.swift */; };
 		272D770A2B8FD7D100551BC2 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 272D770C2B8FD7D100551BC2 /* Localizable.strings */; };
 		272D770F2B8FD8A900551BC2 /* Localize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D770E2B8FD8A900551BC2 /* Localize.swift */; };
+		272D77112B8FDAAA00551BC2 /* ListEventsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77102B8FDAAA00551BC2 /* ListEventsState.swift */; };
+		272D77142B8FEAAA00551BC2 /* MessageRetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77132B8FEAAA00551BC2 /* MessageRetryView.swift */; };
+		272D77162B8FEAC700551BC2 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77152B8FEAC700551BC2 /* LoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +101,9 @@
 		272D77062B8FCE3700551BC2 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		272D770B2B8FD7D100551BC2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		272D770E2B8FD8A900551BC2 /* Localize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localize.swift; sourceTree = "<group>"; };
+		272D77102B8FDAAA00551BC2 /* ListEventsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsState.swift; sourceTree = "<group>"; };
+		272D77132B8FEAAA00551BC2 /* MessageRetryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRetryView.swift; sourceTree = "<group>"; };
+		272D77152B8FEAC700551BC2 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +146,9 @@
 		272D76702B8EA73600551BC2 /* EventsDiscovery */ = {
 			isa = PBXGroup;
 			children = (
+				272D77122B8FEA9F00551BC2 /* Components */,
 				272D76F82B8FBBD300551BC2 /* Extensions */,
 				272D76A02B8EA8BA00551BC2 /* General */,
-				272D76CD2B8F6CCF00551BC2 /* Cache */,
 				272D76D52B8F8C0C00551BC2 /* Network */,
 				272D76A32B8EA94100551BC2 /* Resources */,
 				272D769C2B8EA83600551BC2 /* Targets */,
@@ -232,6 +238,7 @@
 				272D76C12B8F4F3D00551BC2 /* EventView.swift */,
 				272D76BC2B8EBDE200551BC2 /* ListEventsView.swift */,
 				272D76B92B8EB67F00551BC2 /* ListEventsViewController.swift */,
+				272D77102B8FDAAA00551BC2 /* ListEventsState.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -279,14 +286,6 @@
 				272D76BE2B8EBDE600551BC2 /* View */,
 			);
 			path = Presentation;
-			sourceTree = "<group>";
-		};
-		272D76CD2B8F6CCF00551BC2 /* Cache */ = {
-			isa = PBXGroup;
-			children = (
-				272D76CE2B8F6CD600551BC2 /* CacheAsyncImage.swift */,
-			);
-			path = Cache;
 			sourceTree = "<group>";
 		};
 		272D76D52B8F8C0C00551BC2 /* Network */ = {
@@ -405,6 +404,16 @@
 			path = Localize;
 			sourceTree = "<group>";
 		};
+		272D77122B8FEA9F00551BC2 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				272D76CE2B8F6CD600551BC2 /* CacheAsyncImage.swift */,
+				272D77132B8FEAAA00551BC2 /* MessageRetryView.swift */,
+				272D77152B8FEAC700551BC2 /* LoaderView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -516,6 +525,7 @@
 			files = (
 				272D76E22B8F97C100551BC2 /* ListEventsService.swift in Sources */,
 				272D76B82B8EB55800551BC2 /* ListEventsViewModel.swift in Sources */,
+				272D77112B8FDAAA00551BC2 /* ListEventsState.swift in Sources */,
 				272D76DF2B8F96B300551BC2 /* HTTPStatusCode.swift in Sources */,
 				272D76EE2B8FBA9E00551BC2 /* ListEventsResources.swift in Sources */,
 				272D76D92B8F8C8A00551BC2 /* Requestable.swift in Sources */,
@@ -523,6 +533,7 @@
 				272D76FC2B8FBC0A00551BC2 /* JSONEncoder+Extension.swift in Sources */,
 				272D76BA2B8EB67F00551BC2 /* ListEventsViewController.swift in Sources */,
 				272D76AF2B8EAC0B00551BC2 /* InitialFlow.swift in Sources */,
+				272D77142B8FEAAA00551BC2 /* MessageRetryView.swift in Sources */,
 				272D77002B8FBC4D00551BC2 /* JSONDecoder+Extension.swift in Sources */,
 				272D76DD2B8F92C100551BC2 /* AlamofireAttributes.swift in Sources */,
 				272D77032B8FBD6100551BC2 /* NetworkErrorType.swift in Sources */,
@@ -543,6 +554,7 @@
 				272D76E72B8FBA4100551BC2 /* EventResultDTO.swift in Sources */,
 				272D76B62B8EB51B00551BC2 /* ListEventsCoordinator.swift in Sources */,
 				272D76DB2B8F8CB400551BC2 /* NetworkSession.swift in Sources */,
+				272D77162B8FEAC700551BC2 /* LoaderView.swift in Sources */,
 				272D76D72B8F8C5400551BC2 /* Images.swift in Sources */,
 				272D76C22B8F4F3D00551BC2 /* EventView.swift in Sources */,
 			);
