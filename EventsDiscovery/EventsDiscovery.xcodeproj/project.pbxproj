@@ -17,6 +17,10 @@
 		272D76AD2B8EAB9500551BC2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76AC2B8EAB9500551BC2 /* AppCoordinator.swift */; };
 		272D76AF2B8EAC0B00551BC2 /* InitialFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76AE2B8EAC0B00551BC2 /* InitialFlow.swift */; };
 		272D76B32B8EB12800551BC2 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 272D76B22B8EB12800551BC2 /* Launch Screen.storyboard */; };
+		272D76B62B8EB51B00551BC2 /* ListEventsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76B52B8EB51B00551BC2 /* ListEventsCoordinator.swift */; };
+		272D76B82B8EB55800551BC2 /* ListEventsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76B72B8EB55800551BC2 /* ListEventsViewModel.swift */; };
+		272D76BA2B8EB67F00551BC2 /* ListEventsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76B92B8EB67F00551BC2 /* ListEventsViewController.swift */; };
+		272D76BD2B8EBDE200551BC2 /* ListEventsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D76BC2B8EBDE200551BC2 /* ListEventsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,11 @@
 		272D76AC2B8EAB9500551BC2 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		272D76AE2B8EAC0B00551BC2 /* InitialFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialFlow.swift; sourceTree = "<group>"; };
 		272D76B22B8EB12800551BC2 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		272D76B52B8EB51B00551BC2 /* ListEventsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsCoordinator.swift; sourceTree = "<group>"; };
+		272D76B72B8EB55800551BC2 /* ListEventsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewModel.swift; sourceTree = "<group>"; };
+		272D76B92B8EB67F00551BC2 /* ListEventsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsViewController.swift; sourceTree = "<group>"; };
+		272D76BB2B8EB9DF00551BC2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		272D76BC2B8EBDE200551BC2 /* ListEventsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +119,7 @@
 		272D769D2B8EA83D00551BC2 /* EventsDiscovery */ = {
 			isa = PBXGroup;
 			children = (
+				272D76BB2B8EB9DF00551BC2 /* Info.plist */,
 				272D769E2B8EA85C00551BC2 /* Config.plist */,
 			);
 			path = EventsDiscovery;
@@ -138,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				272D76A72B8EAB4300551BC2 /* App */,
+				272D76B42B8EB50800551BC2 /* ListEvents */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -150,6 +161,41 @@
 				272D76AC2B8EAB9500551BC2 /* AppCoordinator.swift */,
 			);
 			path = App;
+			sourceTree = "<group>";
+		};
+		272D76B42B8EB50800551BC2 /* ListEvents */ = {
+			isa = PBXGroup;
+			children = (
+				272D76C02B8EBDF100551BC2 /* Coordinator */,
+				272D76BF2B8EBDEA00551BC2 /* ViewModel */,
+				272D76BE2B8EBDE600551BC2 /* View */,
+			);
+			path = ListEvents;
+			sourceTree = "<group>";
+		};
+		272D76BE2B8EBDE600551BC2 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				272D76BC2B8EBDE200551BC2 /* ListEventsView.swift */,
+				272D76B92B8EB67F00551BC2 /* ListEventsViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		272D76BF2B8EBDEA00551BC2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				272D76B72B8EB55800551BC2 /* ListEventsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		272D76C02B8EBDF100551BC2 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				272D76B52B8EB51B00551BC2 /* ListEventsCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,11 +300,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				272D76B82B8EB55800551BC2 /* ListEventsViewModel.swift in Sources */,
+				272D76BA2B8EB67F00551BC2 /* ListEventsViewController.swift in Sources */,
 				272D76AF2B8EAC0B00551BC2 /* InitialFlow.swift in Sources */,
 				272D76AD2B8EAB9500551BC2 /* AppCoordinator.swift in Sources */,
+				272D76BD2B8EBDE200551BC2 /* ListEventsView.swift in Sources */,
 				272D76A92B8EAB5000551BC2 /* AppDelegate.swift in Sources */,
 				272D76A22B8EA8C300551BC2 /* Config.swift in Sources */,
 				272D76AB2B8EAB7E00551BC2 /* SceneDelegate.swift in Sources */,
+				272D76B62B8EB51B00551BC2 /* ListEventsCoordinator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,10 +461,9 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EventsDiscovery/Targets/EventsDiscovery/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Events;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -422,8 +471,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
@@ -453,10 +502,9 @@
 				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = EventsDiscovery/Targets/EventsDiscovery/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Events;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.entertainment";
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
-				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
@@ -464,8 +512,8 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
