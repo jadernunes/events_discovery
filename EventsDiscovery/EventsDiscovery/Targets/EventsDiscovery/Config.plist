@@ -4,5 +4,7 @@
 <dict>
 	<key>apiKey</key>
 	<string>DW0E98NrxUIfDDtNN7ijruVSm60ryFLX</string>
+	<key>baseURL</key>
+	<string>https://app.ticketmaster.com/discovery</string>
 </dict>
 </plist>
