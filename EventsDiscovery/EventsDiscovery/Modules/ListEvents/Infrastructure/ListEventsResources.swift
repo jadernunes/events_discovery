@@ -6,7 +6,7 @@
 //
 
 enum ListEventsResources {
-    case loadAll(page: Int)
+    case loadAll(page: Int, searchText: String = "")
 }
 
 extension ListEventsResources: Requestable {
@@ -20,12 +20,18 @@ extension ListEventsResources: Requestable {
     
     var parameters: Params? {
         switch self {
-        case let .loadAll(page):
-            return [
+        case let .loadAll(page, searchText):
+            var params: [String: Any] = [
                 "apikey": Config.apiKey,
                 "page": page,
                 "size": 20
             ]
+            
+            if searchText.isEmpty == false {
+                params["keyword"] = searchText
+            }
+            
+            return params
         }
     }
     

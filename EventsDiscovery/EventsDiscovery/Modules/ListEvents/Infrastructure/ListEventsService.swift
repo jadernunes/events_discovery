@@ -8,7 +8,7 @@
 import Foundation
 
 protocol IListEventsService {
-    func laodAll(page: Int) async throws -> EventResultDTO
+    func laodAll(page: Int, searchText: String) async throws -> EventResultDTO
 }
 
 struct ListEventsService: IListEventsService {
@@ -25,7 +25,10 @@ struct ListEventsService: IListEventsService {
     
     // MARK: - Methods
     
-    func laodAll(page: Int) async throws -> EventResultDTO {
-        try await network.makeRequest(requester: ListEventsResources.loadAll(page: page))
+    func laodAll(page: Int, searchText: String) async throws -> EventResultDTO {
+        try await network
+            .makeRequest(requester: ListEventsResources
+                .loadAll(page: page, searchText: searchText)
+        )
     }
 }

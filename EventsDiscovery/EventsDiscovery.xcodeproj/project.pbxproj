@@ -48,6 +48,7 @@
 		272D77112B8FDAAA00551BC2 /* ListEventsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77102B8FDAAA00551BC2 /* ListEventsState.swift */; };
 		272D77142B8FEAAA00551BC2 /* MessageRetryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77132B8FEAAA00551BC2 /* MessageRetryView.swift */; };
 		272D77162B8FEAC700551BC2 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77152B8FEAC700551BC2 /* LoaderView.swift */; };
+		272D771A2B902BC900551BC2 /* AgeRestrictionDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272D77192B902BC900551BC2 /* AgeRestrictionDTO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +105,7 @@
 		272D77102B8FDAAA00551BC2 /* ListEventsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListEventsState.swift; sourceTree = "<group>"; };
 		272D77132B8FEAAA00551BC2 /* MessageRetryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRetryView.swift; sourceTree = "<group>"; };
 		272D77152B8FEAC700551BC2 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		272D77192B902BC900551BC2 /* AgeRestrictionDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeRestrictionDTO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -262,10 +264,11 @@
 		272D76C32B8F4F7300551BC2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				272D76EF2B8FBB1E00551BC2 /* Event */,
+				272D77172B902BA600551BC2 /* AgeRestriction */,
 				272D76F52B8FBB8600551BC2 /* Embedded */,
 				272D76F32B8FBB7100551BC2 /* EventResult */,
 				272D76F12B8FBB5200551BC2 /* Images */,
-				272D76EF2B8FBB1E00551BC2 /* Event */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -414,6 +417,22 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		272D77172B902BA600551BC2 /* AgeRestriction */ = {
+			isa = PBXGroup;
+			children = (
+				272D77182B902BB900551BC2 /* Infrastructure */,
+			);
+			path = AgeRestriction;
+			sourceTree = "<group>";
+		};
+		272D77182B902BB900551BC2 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				272D77192B902BC900551BC2 /* AgeRestrictionDTO.swift */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -528,6 +547,7 @@
 				272D77112B8FDAAA00551BC2 /* ListEventsState.swift in Sources */,
 				272D76DF2B8F96B300551BC2 /* HTTPStatusCode.swift in Sources */,
 				272D76EE2B8FBA9E00551BC2 /* ListEventsResources.swift in Sources */,
+				272D771A2B902BC900551BC2 /* AgeRestrictionDTO.swift in Sources */,
 				272D76D92B8F8C8A00551BC2 /* Requestable.swift in Sources */,
 				272D76C72B8F4FC700551BC2 /* Event.swift in Sources */,
 				272D76FC2B8FBC0A00551BC2 /* JSONEncoder+Extension.swift in Sources */,
