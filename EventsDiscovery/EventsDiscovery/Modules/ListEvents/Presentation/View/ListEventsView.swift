@@ -41,29 +41,32 @@ struct ListEventsView<ViewModel: IListEventsViewModel>: View {
     }
     
     private func loadContent(_ events: [Event]) -> some View {
-        GeometryReader { geo in
-            List {
-                ForEach(events, id: \.id) { event in
-                    EventView(data: event,
-                              imageSize: geo.size.width * 0.25)
-                    .listRowSeparator(.hidden)
-                    .listRowInsets(EdgeInsets())
-                    .task {
-                        await viewModel.loadData(currentEvent: event)
-                    }
-                    
-                    if viewModel.shouldShowLoadMore(currentEvent: event) {
-                        loadingView
+        NavigationStack {
+            GeometryReader { geo in
+                List {
+                    ForEach(events, id: \.id) { event in
+                        EventView(data: event,
+                                  imageSize: geo.size.width * 0.25)
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(EdgeInsets())
+                        .task {
+                            await viewModel.loadData(currentEvent: event)
+                        }
+                        
+                        if viewModel.shouldShowLoadMore(currentEvent: event) {
+                            loadingView
+                        }
                     }
                 }
-            }
-            .listStyle(.plain)
-            .frame(maxWidth: .infinity)
-            .refreshable {
-                await viewModel.loadData(currentEvent: nil)
+                .listStyle(.plain)
+                .frame(maxWidth: .infinity)
+                .refreshable {
+                    await viewModel.loadData(currentEvent: nil)
+                }
             }
         }
         .navigationTitle(Localize.string(key: "listEvents.title"))
+        .searchable(text: $viewModel.search)
     }
     
     private var loadingView: some View {

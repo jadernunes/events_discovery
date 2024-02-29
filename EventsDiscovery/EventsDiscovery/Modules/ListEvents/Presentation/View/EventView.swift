@@ -27,7 +27,7 @@ struct EventView: View {
                 imageView
                 VStack(alignment: .leading) {
                     titleView
-                    classificationView
+                    ageRestrictionsView
                 }
                 .frame(maxHeight: .infinity, alignment: .top)
                 .padding(.vertical, 8)
@@ -86,12 +86,13 @@ private extension EventView {
             .padding(.bottom, 8)
     }
     
-    var classificationView: some View {
+    @ViewBuilder
+    var ageRestrictionsView: some View {
         HStack {
-            Text(Localize.string(key: "classification.title") + ": ")
+            Text(Localize.string(key: "ageRestrictions.title") + ": ")
                 .font(Fonts.regular12)
                 .foregroundStyle(Colors.MediumGray.swiftUI)
-            Text(data.classification).font(Fonts.thin12)
+            Text(ageText).font(Fonts.thin12)
                 .foregroundStyle(Colors.MediumGray.swiftUI)
                 .lineLimit(2)
         }
@@ -102,5 +103,13 @@ private extension EventView {
             .stroke(.black.opacity(0.1), lineWidth: 1)
             .padding(.horizontal, 20)
             .padding(.vertical, 10)
+    }
+    
+    var ageText: String {
+        guard let legalAgeEnforced = data.legalAgeEnforced else {
+            return Localize.string(key: "notMentioned")
+        }
+        
+        return Localize.string(key: legalAgeEnforced ? "yes" : "no")
     }
 }

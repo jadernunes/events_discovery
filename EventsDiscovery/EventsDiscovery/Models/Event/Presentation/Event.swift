@@ -10,6 +10,6 @@ import UIKit
 struct Event: Equatable {
     let id: String
     let name: String
-    let classification: String
+    let legalAgeEnforced: Bool?
     let urlString: String
 }
