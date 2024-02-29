@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  EventsDiscovery
+
+  Created by Jader Nunes on 2024-02-28.
+  
+*/
+
+// MARK: - General
+
+"listEvents.title" = "Events";
+"yes" = "Yes";
+"no" = "No";
+"ageRestrictions.title" = "Has age restrictions";
+"retry" = "Retry";
+"noData" = "No data";
+"genericErrorMessage" = "Something went wrong";
+"notMentioned" = "Not mentioned";
+"error.noInternet" = "No internet";
