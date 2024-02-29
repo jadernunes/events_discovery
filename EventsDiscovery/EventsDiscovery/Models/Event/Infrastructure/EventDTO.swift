@@ -11,9 +11,13 @@ struct EventDTO: Decodable {
     let id: String
     let name: String
     let images: [ImagesDTO]
+    let ageRestrictions: AgeRestrictionDTO?
     
     var asEvent: Event {
         let urlString = images.first?.url.absoluteString ?? ""
-        return Event(id: id, name: name, classification: "", urlString: urlString)
+        return Event(id: id,
+                     name: name,
+                     legalAgeEnforced: ageRestrictions?.legalAgeEnforced,
+                     urlString: urlString)
     }
 }

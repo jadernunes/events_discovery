@@ -9,7 +9,10 @@
 // MARK: - General
 
 "listEvents.title" = "Events";
-"classification.title" = "Classification";
+"yes" = "Yes";
+"no" = "No";
+"ageRestrictions.title" = "Has age restrictions";
 "retry" = "Retry";
 "noData" = "No data";
 "genericErrorMessage" = "Something went wrong";
+"notMentioned" = "Not mentioned";
