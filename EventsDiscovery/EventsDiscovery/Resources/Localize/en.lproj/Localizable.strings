@@ -16,3 +16,4 @@
 "noData" = "No data";
 "genericErrorMessage" = "Something went wrong";
 "notMentioned" = "Not mentioned";
+"error.noInternet" = "No internet";
