@@ -67,12 +67,12 @@ Following the same concept we created a components that could be used everywhere
 
 | App icon | Loader | Splashscreen |
 | ------------- | ------------- | ------------- |
-| ![iPhone1](/screenshots/events1.png?raw=true) | ![iPhone2](/screenshots/events2.png?raw=true) | ![iPhone3](/screenshots/events3.png?raw=true) |
+| ![iPhone1](/EventsDiscovery/screenshots/events1.png?raw=true) | ![iPhone2](/EventsDiscovery/screenshots/events2.png?raw=true) | ![iPhone3](/EventsDiscovery/screenshots/events3.png?raw=true) |
 
 | List events | Pull refresh | Bottom loader |
 | ------------- | ------------- | ------------- | 
-| ![iPhone4](/screenshots/events4.png?raw=true) | ![iPhone5](/screenshots/events5.png?raw=true) | ![iPhone6](/screenshots/events6.png?raw=true) |
+| ![iPhone4](/EventsDiscovery/screenshots/events4.png?raw=true) | ![iPhone5](/EventsDiscovery/screenshots/events5.png?raw=true) | ![iPhone6](/EventsDiscovery/screenshots/events6.png?raw=true) |
 
 | Search | Error state | Empty state |
 | ------------- | ------------- | ------------- |
-| ![iPhone7](/screenshots/events7.png?raw=true) | ![iPhone8](/screenshots/events8.png?raw=true) | ![iPhone9](/screenshots/events9.png?raw=true) |
+| ![iPhone7](/EventsDiscovery/screenshots/events7.png?raw=true) | ![iPhone8](/EventsDiscovery/screenshots/events8.png?raw=true) | ![iPhone9](/EventsDiscovery/screenshots/events9.png?raw=true) |
